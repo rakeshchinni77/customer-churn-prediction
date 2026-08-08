@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="100%" height="100%" style="background-color: #0f172a;">
+  <!-- Title -->
+  <text x="450" y="45" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="24" font-weight="bold">Customer Churn Prediction — System Architecture</text>
+  <text x="450" y="75" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14">FastAPI • Scikit-Learn RandomForest Pipeline • React 19 • Docker Compose</text>
+
+  <!-- Container Box -->
+  <rect x="50" y="100" width="800" height="500" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="75" y="130" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">DOCKER COMPOSE ORCHESTRATION NETWORK</text>
+
+  <!-- React Frontend Container Box -->
+  <rect x="90" y="160" width="320" height="400" rx="12" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
+  <text x="250" y="195" text-anchor="middle" fill="#06b6d4" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">React SPA (Port 3000:80)</text>
+  <rect x="110" y="220" width="280" height="45" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="250" y="248" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Customer Input Form (React Hook Form)</text>
+
+  <rect x="110" y="280" width="280" height="45" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="250" y="308" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Axios HTTP Client Service</text>
+
+  <rect x="110" y="340" width="280" height="45" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="250" y="368" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Risk Meter &amp; Recharts Visualizers</text>
+
+  <rect x="110" y="400" width="280" height="130" rx="8" fill="#151c2c" stroke="#334155"/>
+  <text x="250" y="425" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Dashboard Components</text>
+  <text x="250" y="450" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">✓ Semicircular SVG Risk Gauge</text>
+  <text x="250" y="470" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">✓ Animated CountUp Numbers</text>
+  <text x="250" y="490" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">✓ Probability Breakdown BarChart</text>
+  <text x="250" y="510" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">✓ Important Input Factors Card</text>
+
+  <!-- Arrow between Frontend and Backend -->
+  <path d="M 410 302 L 490 302" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="450" y="290" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">POST /predict</text>
+  <text x="450" y="322" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">JSON Payload</text>
+
+  <!-- FastAPI Backend Container Box -->
+  <rect x="490" y="160" width="320" height="400" rx="12" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+  <text x="650" y="195" text-anchor="middle" fill="#10b981" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">FastAPI Backend (Port 8000)</text>
+
+  <rect x="510" y="220" width="280" height="45" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="650" y="248" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">APIRouter &amp; Lifespan Startup Loader</text>
+
+  <rect x="510" y="280" width="280" height="45" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="650" y="308" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Pydantic v2 Validation Layer</text>
+
+  <rect x="510" y="340" width="280" height="45" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="650" y="368" text-anchor="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13">Predictor Service Engine</text>
+
+  <rect x="510" y="400" width="280" height="130" rx="8" fill="#151c2c" stroke="#10b981"/>
+  <text x="650" y="425" text-anchor="middle" fill="#10b981" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">ML Pipeline Internals</text>
+  <text x="650" y="450" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">✓ ColumnTransformer Preprocessor</text>
+  <text x="650" y="470" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">✓ SimpleImputer + StandardScaler</text>
+  <text x="650" y="490" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">✓ OneHotEncoder(handle_unknown='ignore')</text>
+  <text x="650" y="510" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">✓ RandomForestClassifier (200 trees)</text>
+
+  <!-- Arrow Marker Definition -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8" />
+    </marker>
+  </defs>
+</svg>
