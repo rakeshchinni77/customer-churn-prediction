@@ -1,0 +1,75 @@
+{
+  "info": {
+    "name": "Telco Customer Churn Prediction API Collection",
+    "description": "Postman API Collection for testing Telco Customer Churn REST API endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Root - Service Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Model Info & Metrics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/model-info",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["model-info"]
+        }
+      }
+    },
+    {
+      "name": "Predict Churn",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"gender\": \"Female\",\n  \"SeniorCitizen\": 0,\n  \"Partner\": \"Yes\",\n  \"Dependents\": \"No\",\n  \"tenure\": 5,\n  \"PhoneService\": \"Yes\",\n  \"MultipleLines\": \"No\",\n  \"InternetService\": \"Fiber optic\",\n  \"OnlineSecurity\": \"No\",\n  \"OnlineBackup\": \"Yes\",\n  \"DeviceProtection\": \"No\",\n  \"TechSupport\": \"No\",\n  \"StreamingTV\": \"Yes\",\n  \"StreamingMovies\": \"No\",\n  \"Contract\": \"Month-to-month\",\n  \"PaperlessBilling\": \"Yes\",\n  \"PaymentMethod\": \"Electronic check\",\n  \"MonthlyCharges\": 75.2,\n  \"TotalCharges\": 375.5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/predict",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["predict"]
+        }
+      }
+    }
+  ]
+}
