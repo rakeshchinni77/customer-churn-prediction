@@ -1,0 +1,181 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --bg-main: #0b0f19;
+  --bg-card: #151c2c;
+  --bg-card-header: #1e293b;
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-glow: #1e293b;
+  --risk-low: #10b981;
+  --risk-med: #f59e0b;
+  --risk-high: #ef4444;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* Compact Hero Banner Section */
+.hero-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.25rem 1rem 1rem 1rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #60a5fa, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 620px;
+  margin: 0 auto 0.75rem auto;
+  line-height: 1.4;
+}
+
+.glass-card {
+  background-color: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.card-header-custom {
+  background-color: var(--bg-card-header);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.85rem 1.25rem;
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #e2e8f0;
+}
+
+.form-label {
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.form-select, .form-control {
+  background-color: #0f172a !important;
+  border: 1px solid #334155 !important;
+  color: #f8fafc !important;
+  border-radius: 8px;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.9rem;
+}
+
+.form-select:focus, .form-control:focus {
+  border-color: var(--accent-blue) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+}
+
+.btn-predict {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.75rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+  transition: all 0.2s ease;
+}
+
+.btn-predict:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.55);
+}
+
+.btn-sample {
+  background-color: #334155;
+  border: 1px solid #475569;
+  color: #e2e8f0;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.btn-sample:hover {
+  background-color: #475569;
+  color: #ffffff;
+}
+
+/* Badge Styles */
+.badge-high-risk {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: var(--risk-high);
+  border: 1px solid var(--risk-high);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.badge-med-risk {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: var(--risk-med);
+  border: 1px solid var(--risk-med);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.badge-low-risk {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: var(--risk-low);
+  border: 1px solid var(--risk-low);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+/* Risk Meter Semicircle */
+.gauge-container {
+  position: relative;
+  width: 220px;
+  height: 120px;
+  margin: 1rem auto;
+}
+
+.needle {
+  transform-origin: 110px 110px;
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Toastify Customization */
+.Toastify__toast {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-radius: 10px !important;
+  border: 1px solid #334155 !important;
+}
